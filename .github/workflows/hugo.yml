@@ -1,0 +1,74 @@
+# 这是一个帮你自动把 Hugo 源码编译成网页并部署的脚本
+name: Deploy Hugo site to Pages
+
+on:
+  # 当你把代码 push 到 main 分支时，自动触发这个脚本
+  push:
+    branches:
+      - main  # ⚠️ 注意：如果你的默认分支叫 master，请把这里的 main 改成 master
+
+  # 允许你在 GitHub 网页上手动点击按钮触发部署
+  workflow_dispatch:
+
+# 设置权限，允许脚本把编译好的网页写入到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # 第一阶段：构建（帮你安装 Hugo 并编译代码）
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.157.0 # 使用的 Hugo 版本
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # ⚠️ 极其重要：这行代码负责把你用的 Hugo 主题一起拉取下来，否则网页会是一片空白！
+          fetch-depth: 0
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # 第二阶段：发布（把编译好的 public 文件夹丢给 GitHub Pages）
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
