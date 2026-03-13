@@ -1,25 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cheems的小站</title><link>http://chemheems.top/</link><description>Recent content on Cheems的小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Cheems</copyright><lastBuildDate>Fri, 13 Mar 2026 18:13:52 +0800</lastBuildDate><atom:link href="http://chemheems.top/index.xml" rel="self" type="application/rss+xml"/><item><title>关于raspa2模拟流程示例</title><link>http://chemheems.top/p/myfirst_blog/</link><pubDate>Fri, 13 Mar 2026 18:13:52 +0800</pubDate><guid>http://chemheems.top/p/myfirst_blog/</guid><description>&lt;h1 id="关于raspa2模拟流程示例"&gt;关于raspa2模拟流程示例
-&lt;/h1&gt;&lt;h2 id="1结构优化geo_opt"&gt;1.结构优化（geo_opt）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cheems的小站</title><link>http://chemheems.top/</link><description>Recent content on Cheems的小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Cheems</copyright><lastBuildDate>Fri, 13 Mar 2026 18:13:52 +0800</lastBuildDate><atom:link href="http://chemheems.top/index.xml" rel="self" type="application/rss+xml"/><item><title>关于raspa2模拟流程示例</title><link>http://chemheems.top/p/myfirst_blog/</link><pubDate>Fri, 13 Mar 2026 18:13:52 +0800</pubDate><guid>http://chemheems.top/p/myfirst_blog/</guid><description>&lt;h2 id="1结构优化geo_opt"&gt;1.结构优化（geo_opt）
 &lt;/h2&gt;&lt;h3 id="以ms的forcite模块为例进行结构优化"&gt;以MS的forcite模块为例进行结构优化
 &lt;/h3&gt;&lt;p&gt;打开MS并导入cif文件
 点击MS菜单选择【Modules】——【forcite】——【calculation】
-&lt;img src="http://chemheems.top/Pasted%20image%2020260313114227.png"
+&lt;img src="http://chemheems.top/p/myfirst_blog/1.png"
+width="876"
+height="751"
+srcset="http://chemheems.top/p/myfirst_blog/1_hu_a212ab9c244437dc.png 480w, http://chemheems.top/p/myfirst_blog/1_hu_aefea7e6d1e04d1b.png 1024w"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="116"
+data-flex-basis="279px"
 &gt;&lt;/p&gt;
 &lt;p&gt;将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
 在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
-&lt;img src="http://chemheems.top/Pasted%20image%2020260313114355.png"
+&lt;img src="http://chemheems.top/p/myfirst_blog/2.png"
+width="936"
+height="551"
+srcset="http://chemheems.top/p/myfirst_blog/2_hu_12d0184350c25cd2.png 480w, http://chemheems.top/p/myfirst_blog/2_hu_74b7a94f47be5725.png 1024w"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="407px"
 &gt;
 在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
-&lt;img src="http://chemheems.top/Pasted%20image%2020260313115101.png"
+&lt;img src="http://chemheems.top/p/myfirst_blog/3.png"
+width="881"
+height="733"
+srcset="http://chemheems.top/p/myfirst_blog/3_hu_a0e87ee9c9e58bcb.png 480w, http://chemheems.top/p/myfirst_blog/3_hu_5fa4303be8a3462c.png 1024w"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="120"
+data-flex-basis="288px"
 &gt;
 点击【run】
 产生结构优化文件
 选择文件夹中.xsd后缀的文件
-&lt;img src="http://chemheems.top/Pasted%20image%2020260313120453.png"
+&lt;img src="http://chemheems.top/p/myfirst_blog/4.png"
+width="579"
+height="580"
+srcset="http://chemheems.top/p/myfirst_blog/4_hu_9acb3f796b15a742.png 480w, http://chemheems.top/p/myfirst_blog/4_hu_b653028cba8a9d79.png 1024w"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="99"
+data-flex-basis="239px"
 &gt;
 点击【file】——【export】（格式选择为cif格式)
 至此，我们获得了结构优化后的cif文件。&lt;/p&gt;
