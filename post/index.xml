@@ -2,47 +2,23 @@
 &lt;/h2&gt;&lt;h3 id="以ms的forcite模块为例进行结构优化"&gt;以MS的forcite模块为例进行结构优化
 &lt;/h3&gt;&lt;p&gt;打开MS并导入cif文件
 点击MS菜单选择【Modules】——【forcite】——【calculation】
-&lt;img src="http://chemheems.top/p/myfirst_blog/1.png"
-width="876"
-height="751"
-srcset="http://chemheems.top/p/myfirst_blog/1_hu_a212ab9c244437dc.png 480w, http://chemheems.top/p/myfirst_blog/1_hu_aefea7e6d1e04d1b.png 1024w"
+&lt;img src="http://chemheems.top/1.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="116"
-data-flex-basis="279px"
 &gt;&lt;/p&gt;
 &lt;p&gt;将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
 在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
-&lt;img src="http://chemheems.top/p/myfirst_blog/2.png"
-width="936"
-height="551"
-srcset="http://chemheems.top/p/myfirst_blog/2_hu_12d0184350c25cd2.png 480w, http://chemheems.top/p/myfirst_blog/2_hu_74b7a94f47be5725.png 1024w"
+&lt;img src="http://chemheems.top/2.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="169"
-data-flex-basis="407px"
 &gt;
 在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
-&lt;img src="http://chemheems.top/p/myfirst_blog/3.png"
-width="881"
-height="733"
-srcset="http://chemheems.top/p/myfirst_blog/3_hu_a0e87ee9c9e58bcb.png 480w, http://chemheems.top/p/myfirst_blog/3_hu_5fa4303be8a3462c.png 1024w"
+&lt;img src="http://chemheems.top/3.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="120"
-data-flex-basis="288px"
 &gt;
 点击【run】
 产生结构优化文件
 选择文件夹中.xsd后缀的文件
-&lt;img src="http://chemheems.top/p/myfirst_blog/4.png"
-width="579"
-height="580"
-srcset="http://chemheems.top/p/myfirst_blog/4_hu_9acb3f796b15a742.png 480w, http://chemheems.top/p/myfirst_blog/4_hu_b653028cba8a9d79.png 1024w"
+&lt;img src="http://chemheems.top/4.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="99"
-data-flex-basis="239px"
 &gt;
 点击【file】——【export】（格式选择为cif格式)
 至此，我们获得了结构优化后的cif文件。&lt;/p&gt;

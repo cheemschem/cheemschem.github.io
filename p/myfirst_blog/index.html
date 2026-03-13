@@ -6,15 +6,15 @@
 <span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#1结构优化geo_opt>1.结构优化（geo_opt）</a><ol><li><a href=#以ms的forcite模块为例进行结构优化>以MS的forcite模块为例进行结构优化</a></li></ol></li><li><a href=#2进行氦气孔隙率模拟>2.进行氦气孔隙率模拟</a></li><li><a href=#3气体吸附模拟>3.气体吸附模拟</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/myfirst_blog/>关于raspa2模拟流程示例</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published datetime=2026-03-13T18:13:52+08:00>Mar 13, 2026</time></div></footer></div></header><section class=article-content><h2 id=1结构优化geo_opt>1.结构优化（geo_opt）</h2><h3 id=以ms的forcite模块为例进行结构优化>以MS的forcite模块为例进行结构优化</h3><p>打开MS并导入cif文件
 点击MS菜单选择【Modules】——【forcite】——【calculation】
-<img src=/p/myfirst_blog/1.png width=876 height=751 srcset="/p/myfirst_blog/1_hu_a212ab9c244437dc.png 480w, /p/myfirst_blog/1_hu_aefea7e6d1e04d1b.png 1024w" loading=lazy class=gallery-image data-flex-grow=116 data-flex-basis=279px></p><p>将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
+<img src=/1.png loading=lazy></p><p>将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
 在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
-<img src=/p/myfirst_blog/2.png width=936 height=551 srcset="/p/myfirst_blog/2_hu_12d0184350c25cd2.png 480w, /p/myfirst_blog/2_hu_74b7a94f47be5725.png 1024w" loading=lazy class=gallery-image data-flex-grow=169 data-flex-basis=407px>
+<img src=/2.png loading=lazy>
 在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
-<img src=/p/myfirst_blog/3.png width=881 height=733 srcset="/p/myfirst_blog/3_hu_a0e87ee9c9e58bcb.png 480w, /p/myfirst_blog/3_hu_5fa4303be8a3462c.png 1024w" loading=lazy class=gallery-image data-flex-grow=120 data-flex-basis=288px>
+<img src=/3.png loading=lazy>
 点击【run】
 产生结构优化文件
 选择文件夹中.xsd后缀的文件
-<img src=/p/myfirst_blog/4.png width=579 height=580 srcset="/p/myfirst_blog/4_hu_9acb3f796b15a742.png 480w, /p/myfirst_blog/4_hu_b653028cba8a9d79.png 1024w" loading=lazy class=gallery-image data-flex-grow=99 data-flex-basis=239px>
+<img src=/4.png loading=lazy>
 点击【file】——【export】（格式选择为cif格式)
 至此，我们获得了结构优化后的cif文件。</p><h2 id=2进行氦气孔隙率模拟>2.进行氦气孔隙率模拟</h2><p>编辑raspa input文件（以下为示例文件）</p><p>运行文件相对位置</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
