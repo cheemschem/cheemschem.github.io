@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Cheems的小站</title><link>http://chemheems.top/post/</link><description>Recent content in Posts on Cheems的小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Cheems</copyright><lastBuildDate>Fri, 13 Mar 2026 18:13:52 +0800</lastBuildDate><atom:link href="http://chemheems.top/post/index.xml" rel="self" type="application/rss+xml"/><item><title>关于raspa2模拟流程示例</title><link>http://chemheems.top/p/myfirst_blog/</link><pubDate>Fri, 13 Mar 2026 18:13:52 +0800</pubDate><guid>http://chemheems.top/p/myfirst_blog/</guid><description>&lt;h2 id="1结构优化geo_opt"&gt;1.结构优化（geo_opt）
-&lt;/h2&gt;&lt;h3 id="以ms的forcite模块为例进行结构优化"&gt;以MS的forcite模块为例进行结构优化
-&lt;/h3&gt;&lt;p&gt;打开MS并导入cif文件
+&lt;/h2&gt;&lt;p&gt;以MS的forcite模块为例进行结构优化&lt;/p&gt;
+&lt;p&gt;打开MS并导入cif文件
 点击MS菜单选择【Modules】——【forcite】——【calculation】
-&lt;img src="http://chemheems.top/1.png"
+&lt;img src="http://chemheems.top/image/index.png"
 loading="lazy"
-&gt;&lt;/p&gt;
-&lt;p&gt;将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
+&gt;
+将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
 在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
-&lt;img src="http://chemheems.top/2.png"
+&lt;img src="http://chemheems.top/image/index-1.png"
 loading="lazy"
 &gt;
 在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
-&lt;img src="http://chemheems.top/3.png"
+&lt;img src="http://chemheems.top/image/index-2.png"
 loading="lazy"
 &gt;
 点击【run】
 产生结构优化文件
 选择文件夹中.xsd后缀的文件
-&lt;img src="http://chemheems.top/4.png"
+&lt;img src="http://chemheems.top/image/index-3.png"
 loading="lazy"
 &gt;
 点击【file】——【export】（格式选择为cif格式)
