@@ -5,23 +5,23 @@ title = '关于raspa2模拟流程示例'
 slug = 'myfirst_blog'
 +++
 
-# 关于raspa2模拟流程示例
+
 ## 1.结构优化（geo_opt）
 ### 以MS的forcite模块为例进行结构优化
 
 打开MS并导入cif文件
 点击MS菜单选择【Modules】——【forcite】——【calculation】
-![](Pasted%20image%2020260313114227.png)
+![](1.png)
 
 将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
 在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
-![](Pasted%20image%2020260313114355.png)
+![](2.png)
 在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
-![](Pasted%20image%2020260313115101.png)
+![](3.png)
 点击【run】
 产生结构优化文件
 选择文件夹中.xsd后缀的文件
-![](Pasted%20image%2020260313120453.png)
+![](4.png)
 点击【file】——【export】（格式选择为cif格式)
 至此，我们获得了结构优化后的cif文件。
 ## 2.进行氦气孔隙率模拟
