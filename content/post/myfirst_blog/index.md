@@ -2,6 +2,7 @@
 date = '2026-03-13T18:13:52+08:00'
 draft = false
 title = '关于raspa2模拟流程示例'
+slug = 'myfirst_blog'
 +++
 
 # 关于raspa2模拟流程示例
