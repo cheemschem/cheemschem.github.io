@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Cheems的小站</title><link>http://chemheems.top/post/</link><description>Recent content in Posts on Cheems的小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Cheems</copyright><lastBuildDate>Fri, 13 Mar 2026 18:13:52 +0800</lastBuildDate><atom:link href="http://chemheems.top/post/index.xml" rel="self" type="application/rss+xml"/><item><title>关于raspa2模拟流程示例</title><link>http://chemheems.top/p/myfirst_blog/</link><pubDate>Fri, 13 Mar 2026 18:13:52 +0800</pubDate><guid>http://chemheems.top/p/myfirst_blog/</guid><description>&lt;h2 id="1结构优化geo_opt"&gt;1.结构优化（geo_opt）
 &lt;/h2&gt;&lt;p&gt;以MS的forcite模块为例进行结构优化&lt;/p&gt;
-&lt;p&gt;打开MS并导入cif文件
-点击MS菜单选择【Modules】——【forcite】——【calculation】
+&lt;p&gt;打开MS并导入cif文件&lt;br&gt;
+点击MS菜单选择【Modules】——【forcite】——【calculation】&lt;br&gt;
 &lt;img src="http://chemheems.top/image/index.png"
 loading="lazy"
 &gt;
-将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）
-在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）
+将【task】选项改为Geometry optimization（点击more即可打开左边的窗口）&lt;br&gt;
+在【setup】选择合适的精度（我这里选取Smart, Ultra-fine的精度）&lt;br&gt;
 &lt;img src="http://chemheems.top/image/index-1.png"
 loading="lazy"
-&gt;
-在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine
+&gt;&lt;br&gt;
+在【energy】选项中，力场（forcefiled）选择universal，质量（quality）选择ultra-fine&lt;br&gt;
 &lt;img src="http://chemheems.top/image/index-2.png"
 loading="lazy"
-&gt;
-点击【run】
-产生结构优化文件
-选择文件夹中.xsd后缀的文件
-&lt;img src="http://chemheems.top/image/index-3.png"
+&gt;&lt;/p&gt;
+&lt;p&gt;点击【run】&lt;br&gt;
+产生结构优化文件&lt;br&gt;
+选择文件夹中.xsd后缀的文件&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chemheems.top/image/index-3.png"
 loading="lazy"
-&gt;
-点击【file】——【export】（格式选择为cif格式)
+&gt;&lt;/p&gt;
+&lt;p&gt;点击【file】——【export】（格式选择为cif格式)&lt;br&gt;
 至此，我们获得了结构优化后的cif文件。&lt;/p&gt;
 &lt;h2 id="2进行氦气孔隙率模拟"&gt;2.进行氦气孔隙率模拟
 &lt;/h2&gt;&lt;p&gt;编辑raspa input文件（以下为示例文件）&lt;/p&gt;
@@ -117,14 +117,14 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;使用9950x的单核模拟，消耗时间约为3mins&lt;/p&gt;
-&lt;p&gt;打开【output】——【system0】——output文件
-查找&lt;code&gt;Average Widom Rosenbluth-weigh&lt;/code&gt;
-示例：
-&lt;code&gt; [helium] Average Widom Rosenbluth-weight: 0.249963 +/- 0.000741 [-]&lt;/code&gt;
+&lt;p&gt;打开【output】——【system0】——output文件&lt;br&gt;
+查找&lt;code&gt;Average Widom Rosenbluth-weigh&lt;/code&gt;&lt;br&gt;
+示例：&lt;br&gt;
+&lt;code&gt; [helium] Average Widom Rosenbluth-weight: 0.249963 +/- 0.000741 [-]&lt;/code&gt;&lt;br&gt;
 (0.249963为氦气孔隙率，0.000741为误差)&lt;/p&gt;
 &lt;p&gt;准备工作完成后，可以进行正式的气体模拟。&lt;/p&gt;
 &lt;h2 id="3气体吸附模拟"&gt;3.气体吸附模拟
-&lt;/h2&gt;&lt;p&gt;与氦气孔隙率的模拟类似，只是把氦气替换为你所需要吸附的气体
+&lt;/h2&gt;&lt;p&gt;与氦气孔隙率的模拟类似，只是把氦气替换为你所需要吸附的气体&lt;br&gt;
 这里以CO2为例&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -214,7 +214,7 @@ loading="lazy"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;*raspa网站 （&lt;a class="link" href="https://iraspa.org/raspa/" target="_blank" rel="noopener"
-&gt;RASPA – iRASPA&lt;/a&gt;）
+&gt;RASPA – iRASPA&lt;/a&gt;）&lt;br&gt;
 具体参数设置及学习可以参照raspa2的手册（&lt;a class="link" href="https://iraspa.org/raspa/#" target="_blank" rel="noopener"
 &gt;raspa manual&lt;/a&gt;）&lt;/p&gt;
 &lt;p&gt;模拟完成后产生以下文件&lt;/p&gt;
