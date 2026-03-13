@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Tags on Cheems的小站</title>
-        <link>https://chemcheems.top/tags/</link>
-        <description>Recent content in Tags on Cheems的小站</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>Cheems</copyright><atom:link href="https://chemcheems.top/tags/index.xml" rel="self" type="application/rss+xml" />
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Cheems的小站</title><link>http://chemheems.top/tags/</link><description>Recent content in Tags on Cheems的小站</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Cheems</copyright><atom:link href="http://chemheems.top/tags/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
