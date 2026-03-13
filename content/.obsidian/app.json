@@ -1,5 +1,7 @@
 {
-  "attachmentFolderPath": "附件",
+  "attachmentFolderPath": "image",
   "newFileLocation": "folder",
-  "newFileFolderPath": "post/myfirst_blog"
+  "newFileFolderPath": "post/myfirst_blog",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
 }
