@@ -57,8 +57,8 @@ pagination:
     pagerSize: 5
 
 permalinks:
-    post: /p/:filename/  # 推荐！这样直接用 test.md 的 "test" 作为网址
-    page: /:filename/
+    post: /p/:slug/  # 请改回 :slug！
+    page: /:slug/
 
 params:
     mainSections:
